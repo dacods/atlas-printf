@@ -7,11 +7,11 @@
  * Return: 0
  */
 
-int printf_char(va_list args)
+int printf_char(const char *, va_list args)
 {
 	char character = va_list(args, int);
 
 	_putchar(character);
 	
-	return (0);
+	return (1);
 }
