@@ -3,12 +3,14 @@
 
 typedef struct
 {
-	char *symbol;
+	char *op;
 
 	int (*f)(va_list);
 }convert;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int printf_char(const char *, va_list args);
+int printf_string(const char *, va_list args);
 
 #endif
