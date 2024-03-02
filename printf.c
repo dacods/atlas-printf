@@ -22,26 +22,28 @@ int _printf(const char *format, ...)
 	while (*format != '\0')
 	{
 		if (*format == '%' && get_func(1 + format) != NULL)
+		{
 			format++;
-
-		if (*format == 'd')
-			str += printf_integers(va_arg(args, const char *))
-
-				else if (*format == 's')
-			str += printf_string(va_arg(args, const char *))
-
-				else if (*format == 'i')
-			str += printf_integers(va_arg(args, const char *))
-
-				else if (*format == 'c')
-			str += printf_char(va_arg(args, const char *))
+			if (*format == 'd')
+				str += printf_integers(format, args);
+			else if (*format == 's')
+				str += printf_string(format, args);
+			else if (*format == 'i')
+				str += printf_integers(format, args);
+			else if (*format == 'c')
+				str += printf_char(format, args);
 		else
 		{
 			_putchar('%');
 			_putchar(*format);
+			str += 2;
+		}
 		}
 		else
+		{
 			_putchar(*format);
+			str++;
+		}
 
 		format++;
 	}
