@@ -30,7 +30,6 @@ int _printf(const char *format, ...)
 				str += printf_char(format, args);
 		else
 		{
-			_putchar('%');
 			_putchar(*format);
 			str += 2;
 		}
