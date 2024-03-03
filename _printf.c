@@ -31,7 +31,6 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(*format);
-			str += 2;
 		}
 		}
 		else
