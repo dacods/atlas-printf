@@ -24,9 +24,7 @@ int _printf(const char *format, ...)
 		if (*format == '%' && get_func(1 + format) != NULL)
 		{
 			format++;
-			if (*format == 'd' || *format == 'i')
-				str += printf_integers(format, args);
-			else if (*format == 's')
+			if (*format == 's')
 				str += printf_string(format, args);
 			else if (*format == 'c')
 				str += printf_char(format, args);
