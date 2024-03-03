@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 				str += printf_char(format, args);
 		else if(*format == '%')
 		{
-			_putchar(*format);
+			str += printf_per(format, args);
 			
 		}
 		}
