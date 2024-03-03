@@ -3,6 +3,7 @@
 
 /**
  * printf_string - Function that prints a string of characters
+ * @format: A string
  * @args: Arguments
  * Return: i
  */

@@ -3,7 +3,8 @@
 
 /**
  * printf_char - Function that prints a character
- * @character: A character
+ * @format: A string
+ * @args: arguments
  * Return: 0
  */
 
