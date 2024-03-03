@@ -29,6 +29,8 @@ int _printf(const char *format, ...)
 				str += printf_string(format, args);
 			else if (*format == 'c')
 				str += printf_char(format, args);
+			else
+                        	str += printf_per(format, args);
 		}
 		else
 		{
