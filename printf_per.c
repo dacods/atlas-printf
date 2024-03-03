@@ -10,7 +10,7 @@
 
 int printf_per(const char *format, __attribute__((unused)) va_list args)
 {
-	if (format != 0)
+	if (format != NULL && *format == '%')
 	{
 		_putchar('%');
 		return (1);
