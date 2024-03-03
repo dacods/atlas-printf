@@ -3,6 +3,7 @@
 
 /**
  * printf_per - Function that prints the percent sign
+ * @format: A string
  * @args: Arguments
  * Return: 1
  */

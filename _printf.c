@@ -4,7 +4,7 @@
 /**
  * _printf - Function that produces output according to a format
  * @format: a character string
- * Return:
+ * Return: str
  */
 
 int _printf(const char *format, ...)
@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	int str;
 
 	va_list args;
+
 	va_start(args, format);
 
 	if (format == NULL)
@@ -28,10 +29,9 @@ int _printf(const char *format, ...)
 				str += printf_string(format, args);
 			else if (*format == 'c')
 				str += printf_char(format, args);
-		else if(*format == '%')
+		else
 		{
 			str += printf_per(format, args);
-			
 		}
 		}
 		else
@@ -43,5 +43,5 @@ int _printf(const char *format, ...)
 		format++;
 	}
 	va_end(args);
-	return(str);
+	return (str);
 }
