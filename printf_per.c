@@ -7,9 +7,13 @@
  * Return: 1
  */
 
-int printf_per(const char *, __attribute__((unused)) va_list args)
+int printf_per(const char *format, __attribute__((unused)) va_list args)
 {
-	_putchar('%');
-
-	return (1);
+	if (format != 0)
+	{
+		_putchar('%');
+		return (1);
+	}
+	else
+		return (0);
 }
