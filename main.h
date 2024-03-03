@@ -7,7 +7,7 @@
 
 int (*get_func(const char *s))(const char *, va_list args);
 int _putchar(char c);
-int printf(const char *format, ...);
+int _printf(const char *format, ...);
 int printf_char(const char *, va_list args);
 int printf_string(const char *, va_list args);
 int printf_per(const char *, __attribute__((unused)) va_list args);
