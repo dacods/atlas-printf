@@ -28,9 +28,10 @@ int _printf(const char *format, ...)
 				str += printf_string(format, args);
 			else if (*format == 'c')
 				str += printf_char(format, args);
-		else
+		else if(*format == '%')
 		{
 			_putchar(*format);
+			
 		}
 		}
 		else
