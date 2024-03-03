@@ -4,13 +4,13 @@
 /**
  * printf_string - Function that prints a string of characters
  * @args: Arguments
- * Return:
+ * Return: i
  */
 
 int printf_string(const char *, va_list args)
 {
 	int i;
-	const char string;
+	const char *string;
 
 	string = va_arg(args, const char *);
 

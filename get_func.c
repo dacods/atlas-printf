@@ -3,15 +3,15 @@
  *
  *
  */
-int (get_func(char *s)(const char *formar))
+int (*get_func(const char *s))(const char *, va_list args)
 {
-	convert func[] {
+	convert func[] = {
 	{"c", printf_char},
 	{"s", printf_string},
 	{"%", printf_per},
-	{"d", printf_integer},
-	{"i", printf_i},
-	(NULL, NULL}
+	{"d", printf_integers},
+	{"i", printf_integers},
+	{NULL, NULL}
 	};
 
 	int i = 0;

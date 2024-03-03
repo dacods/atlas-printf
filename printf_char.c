@@ -7,9 +7,9 @@
  * Return: 0
  */
 
-int printf_char(const char *, va_list args)
+int printf_char(const char *format, va_list args)
 {
-	char character = va_list(args, int);
+	char character = va_arg(args, int);
 
 	_putchar(character);
 	
