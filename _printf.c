@@ -25,12 +25,14 @@ int _printf(const char *format, ...)
 		if (*format == '%' && get_func(1 + format) != NULL)
 		{
 			format++;
-			if (*format == 's')
+			if (*format == 'd' || *format == 'i')
+				str += printf_integers(format, args);
+			else if (*format == 's')
 				str += printf_string(format, args);
 			else if (*format == 'c')
 				str += printf_char(format, args);
 			else if (*format == '%')
-                        	str += printf_per(format, args);
+				str += printf_per(format, args);
 			else
 				_putchar(*format);
 		}
