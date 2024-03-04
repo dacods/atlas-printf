@@ -10,6 +10,8 @@ int (*get_func(const char *s))(const char *, va_list args)
 	{"c", printf_char},
 	{"s", printf_string},
 	{"%", printf_per},
+	{"d", printf_integers},
+	{"i", printf_integers},
 	{NULL, NULL}
 	};
 
