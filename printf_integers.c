@@ -37,7 +37,6 @@ int printf_integers(const char *format, va_list args)
 
 	if (format == 0)
 	{
-		_putchar(num);
         	return (len);
 	}
 	else
