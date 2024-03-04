@@ -16,5 +16,8 @@ int printf_per(const char *format, __attribute__((unused)) va_list args)
 		return (1);
 	}
 	else
+	{
+		va_arg(args, char *);
 		return (0);
+	}
 }
