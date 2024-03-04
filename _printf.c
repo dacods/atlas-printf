@@ -20,12 +20,12 @@ int _printf(const char *format, ...)
 
 	str = 0;
 
-	while (*format != '\0')
+	while (*format != '\0') /** Iterates through format string */
 	{
 		if (*format == '%' && get_func(1 + format) != NULL)
 		{
 			format++;
-			if (*format == 'd' || *format == 'i')
+			if (*format == 'd' || *format == 'i') /** checks for format specifier */
 				str += printf_integers(format, args);
 			else if (*format == 's')
 				str += printf_string(format, args);
@@ -45,5 +45,5 @@ int _printf(const char *format, ...)
 		format++;
 	}
 	va_end(args);
-	return (str);
+	return (str); /** returns number of characters printed  */
 }
