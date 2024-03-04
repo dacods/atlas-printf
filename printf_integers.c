@@ -17,7 +17,7 @@ int printf_integers(const char *format, va_list args)
 	check = 1;
 	len = 0;
 
-	if (n < 0)
+	if (n < 0) /** Handles negatatives */
 	{
 		len += _putchar('-');
 		num = n * -1;
@@ -25,17 +25,17 @@ int printf_integers(const char *format, va_list args)
 	else
 		num = n;
 
-	for (; num / check > 9; )
+	for (; num / check > 9; ) /** calculates number of digits in the integer */
 		check *= 10;
 
-	for (; check != 0; )
+	for (; check != 0; ) /** prints each digit of the integer */
 	{
 		len += _putchar('0' + num / check);
 		num %= check;
 		check /= 10;
 	}
 
-	if (format != 0)
+	if (format != 0) /** if format is not 0, return len, otherwise return 0 */
 	{
 		return (len);
 	}
