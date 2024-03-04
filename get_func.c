@@ -16,8 +16,8 @@ int (*get_func(const char *s))(const char *, va_list args)
 	};
 
 	int i = 0;
-
+	/** Iterates through the array until a match or the end is reached */
 	while (func[i].op != NULL && *(func[i].op) != *s)
 		i++;
-	return (func[i].f);
+	return (func[i].f); /** Return corresponding function pointer */
 }
