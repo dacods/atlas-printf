@@ -1,0 +1,30 @@
+.TH _PRINTF 1 "March 4, 2024" "Version 1.0" "User Commands"
+
+.SH NAME
+_printf \- format and print data
+
+.SH SYNOPSIS
+.B _printf
+.RI "format [ argument ]..."
+
+.SH DESCRIPTION
+.B printf
+writes the formatted output to standard output.
+
+The format is a character string that consists of characters and directives. A directive is introduced by a '%' character and ends with a conversion specifier. The conversion specifier begins with a character that specifies the type of conversion.
+
+.SH OPTIONS
+.BR "format" " [ " "argument" " ]..."
+
+The format string may contain ordinary characters and conversion specifiers. The conversion specifiers are replaced by the values of the corresponding arguments.
+
+.SH EXAMPLES
+Print a string:
+.BR "printf " "\"Hola, Mundo!\\n\""
+
+Print an integer:
+.BR "printf " "\"The answer is: %d\\n\"" " 42"
+
+
+.SH AUTHOR
+This man page was written by Braden Chance and Dacoda Takagi.
