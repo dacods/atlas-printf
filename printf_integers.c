@@ -8,7 +8,7 @@
  * Return:
  */
 
-int printf_integers(va_list args)
+int printf_integers(const char *format, va_list args)
 {
         int n, check, len;
         unsigned int num;
@@ -35,5 +35,11 @@ int printf_integers(va_list args)
                 check /= 10;
         }
 
-        return (len);
+	if (format == 0)
+	{
+		_putchar(num);
+        	return (len);
+	}
+	else
+		return (0);
 }
