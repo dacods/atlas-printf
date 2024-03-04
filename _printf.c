@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 			else if (*format == 'c')
 				str += printf_char(format, args);
 			else if (*format == '%')
-                        	str += printf_per(format, args);
+				str += printf_per(format, args);
 			else
 				_putchar(*format);
 		}
